@@ -1,0 +1,16 @@
+<h2>Current User</h2>
+
+<table>
+<tr>
+<th>Name </th>
+<th>Email </th>
+</tr>
+
+<tr>
+<th><%= @user.name%></th>
+<th><br></th>
+<th><%= @user.email%></th>
+</tr>
+<th><%= link_to "Back", users_url%></th>
+<th> <%= link_to "Update", edit_user_url(@user) %> </th>
+</table>

@@ -1,0 +1,19 @@
+<h2>Names of the Users</h2>
+<%= link_to "New", new_user_url(@user) %>
+
+
+<table>
+<tr><th>Name </th>
+<th>Email </th></tr>
+<% @user.each do |data|%><tr>
+<th><%= data.name%></th>
+<th><br></th>
+<th><%= data.email%></th>
+<th> <%=link_to "Update", edit_user_url(data) %></th>
+<th> <%= link_to "Show", user_path(data) %> </th>
+<th> <%=button_to "Delete", user_path(data), method: :delete %></th>
+</tr>
+<%end%>
+
+<%= paginate @user%>
+</table>
